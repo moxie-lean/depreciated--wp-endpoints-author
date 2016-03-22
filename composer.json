@@ -1,7 +1,7 @@
 {
   "name": "moxie-leean/wp-endpoints-author",
   "description": "wp-endpoints-author",
-  "keywords": [wordpress,wp-api,php,api],
+  "keywords": ["wordpress","wp-api","php,api"],
   "homepage": "https://github.com/moxie-leean/wp-endpoints-author",
   "type": "library",
   "license": "MIT",
@@ -21,7 +21,7 @@
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "2.*",
-    "wp-coding-standards/wpcs": "dev-master"
+    "wp-coding-standards/wpcs": "0.9.0"
   },
   "scripts": {
     "installSniffer": [

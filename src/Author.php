@@ -1,6 +1,6 @@
 <?php namespace Leean\Endpoints;
 
-use Leean\AbstractEndpoint;
+use Leean\Endpoint;
 use Leean\Endpoints\Filters;
 
 /**
@@ -9,7 +9,7 @@ use Leean\Endpoints\Filters;
  *
  * @since 0.1.0
  */
-class Author extends AbstractEndpoint {
+class Author extends Endpoint {
 	/**
 	 * Slug of the new endpoint.
 	 *
@@ -32,7 +32,7 @@ class Author extends AbstractEndpoint {
 	/**
 	 * Callback that creates the data that send to the endpoint.
 	 *
-	 * @override
+	 * @Override
 	 *
 	 * @param \WP_REST_Request $request The request.
 	 * @return array The array with the data of the endpoint

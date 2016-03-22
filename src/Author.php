@@ -59,8 +59,7 @@ class Author extends AbstractEndpoint {
 			'last_name' => $data->last_name,
 			'description' => $data->description,
 		];
-		$filter = $this->get_api_data_filter_name();
-		return apply_filters( $filter, $response, $data->ID );
+		return $this->filter_data( $response, $data->ID );
 	}
 
 	/**

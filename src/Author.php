@@ -1,6 +1,6 @@
 <?php namespace Leean\Endpoints;
 
-use Leean\Endpoint;
+use Leean\AbstractEndpoint;
 
 /**
  * Class that creates and endpoint with the data associated with the author
@@ -8,7 +8,7 @@ use Leean\Endpoint;
  *
  * @since 0.1.0
  */
-class Author extends Endpoint {
+class Author extends AbstractEndpoint {
 	/**
 	 * Slug of the new endpoint.
 	 *
@@ -23,10 +23,6 @@ class Author extends Endpoint {
 	 *
 	 * @since 0.1.0
 	 */
-	public static function init() {
-		$author_endpoint = new self();
-		$author_endpoint->create();
-	}
 
 	/**
 	 * Callback that creates the data that send to the endpoint.
@@ -63,7 +59,7 @@ class Author extends Endpoint {
 			'last_name' => $data->last_name,
 			'description' => $data->description,
 		];
-		$filter = $this->get_filter_name();
+		$filter = $this->get_api_data_filter_name();
 		return apply_filters( $filter, $response, $data->ID );
 	}
 

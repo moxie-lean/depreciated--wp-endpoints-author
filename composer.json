@@ -1,7 +1,6 @@
 {
   "name": "moxie-leean/wp-endpoints-author",
   "description": "wp-endpoints-author",
-  "keywords": ["wordpress","wp-api","php,api"],
   "homepage": "https://github.com/moxie-leean/wp-endpoints-author",
   "type": "library",
   "license": "MIT",

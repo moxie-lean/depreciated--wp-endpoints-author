@@ -1,7 +1,6 @@
 <?php namespace Leean\Endpoints;
 
 use Leean\Endpoint;
-use Leean\Endpoints\Filters;
 
 /**
  * Class that creates and endpoint with the data associated with the author

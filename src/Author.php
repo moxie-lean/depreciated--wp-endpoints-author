@@ -1,8 +1,8 @@
 <?php namespace Leean\Endpoints;
 
-use Leean\Endpoint;
+use Leean\AbstractEndpoint;
 
-class Author extends Endpoint {
+class Author extends AbstractEndpoint {
 	protected $endpoint = '/author';
 
 	public static function init(){

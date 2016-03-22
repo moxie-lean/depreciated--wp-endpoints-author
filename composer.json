@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Leean\\": "src/"
+      "Leean\\Endpoints\\": "src/"
     }
   },
   "require-dev": {
@@ -30,9 +30,9 @@
       "./vendor/bin/phpcs --config-set show_progress 0",
       "./vendor/bin/phpcs --config-set colors 1"
     ],
-    "post-install-cmd": [ "@installSnifferj" ],
+    "post-install-cmd": [ "@installSniffer" ],
     "post-update-cmd": [ "@installSniffer" ],
-    "test": [
+    "ci": [
       "phpcs src/*.php"
     ]
   }

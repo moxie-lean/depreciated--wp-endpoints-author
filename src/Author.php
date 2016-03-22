@@ -60,7 +60,7 @@ class Author extends AbstractEndpoint {
 		$response = [
 			'id' => $data->ID,
 			'email' => $data->user_email,
-			'first_name' => $data->first_name,
+			'name' => $data->first_name,
 			'last_name' => $data->last_name,
 			'description' => $data->description,
 		];

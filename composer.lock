@@ -4,22 +4,22 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "61a7a1f1a3102b3abbfae8ca06b0ac79",
-    "content-hash": "12bb1a021bea277ed249554fec465797",
+    "hash": "80839675362375875e3380d73cc2264e",
+    "content-hash": "27bb3b771fd151cc2f659a88ae038513",
     "packages": [],
     "packages-dev": [
         {
             "name": "moxie-leean/wp-endpoint",
-            "version": "dev-master",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moxie-leean/wp-endpoint.git",
-                "reference": "8920b9ed006560c8a17cd6f1807cc6a27e81e6bc"
+                "reference": "330400607ba718eb6b6e17d3e9e51b91bdad44b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moxie-leean/wp-endpoint/zipball/8920b9ed006560c8a17cd6f1807cc6a27e81e6bc",
-                "reference": "8920b9ed006560c8a17cd6f1807cc6a27e81e6bc",
+                "url": "https://api.github.com/repos/moxie-leean/wp-endpoint/zipball/330400607ba718eb6b6e17d3e9e51b91bdad44b0",
+                "reference": "330400607ba718eb6b6e17d3e9e51b91bdad44b0",
                 "shasum": ""
             },
             "require": {
@@ -27,7 +27,7 @@
             },
             "require-dev": {
                 "squizlabs/php_codesniffer": "2.*",
-                "wp-coding-standards/wpcs": "0.9.0"
+                "wp-coding-standards/wpcs": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -47,7 +47,7 @@
             ],
             "description": "wp-endpoint",
             "homepage": "https://github.com/moxie-leean/wp-endpoints-post/",
-            "time": "2016-03-22 02:35:32"
+            "time": "2016-03-22 23:49:25"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -165,9 +165,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "moxie-leean/wp-endpoint": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

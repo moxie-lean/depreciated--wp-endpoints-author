@@ -1,6 +1,6 @@
-<?php namespace Leean\Endpoints;
+<?php namespace Lean\Endpoints;
 
-use Leean\AbstractEndpoint;
+use Lean\AbstractEndpoint;
 
 /**
  * Class that creates and endpoint with the data associated with the author

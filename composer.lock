@@ -4,22 +4,22 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "46623e04a2bc87c25ab3149378c6cec8",
-    "content-hash": "27bb3b771fd151cc2f659a88ae038513",
+    "hash": "372455264d83e6abdf65eafe0e6d8e82",
+    "content-hash": "131d5940ebfe6111afdb5ddc9739b081",
     "packages": [],
     "packages-dev": [
         {
-            "name": "moxie-leean/wp-endpoint",
-            "version": "0.1.0",
+            "name": "moxie-lean/wp-endpoint",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moxie-leean/wp-endpoint.git",
-                "reference": "330400607ba718eb6b6e17d3e9e51b91bdad44b0"
+                "reference": "a0d57f6cd385a720c2c0d2658d46bb199c65295e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moxie-leean/wp-endpoint/zipball/330400607ba718eb6b6e17d3e9e51b91bdad44b0",
-                "reference": "330400607ba718eb6b6e17d3e9e51b91bdad44b0",
+                "url": "https://api.github.com/repos/moxie-leean/wp-endpoint/zipball/a0d57f6cd385a720c2c0d2658d46bb199c65295e",
+                "reference": "a0d57f6cd385a720c2c0d2658d46bb199c65295e",
                 "shasum": ""
             },
             "require": {
@@ -27,12 +27,12 @@
             },
             "require-dev": {
                 "squizlabs/php_codesniffer": "2.*",
-                "wp-coding-standards/wpcs": "dev-master"
+                "wp-coding-standards/wpcs": "0.9.0"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Leean\\": "src/"
+                    "Lean\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -47,23 +47,24 @@
             ],
             "description": "wp-endpoint",
             "homepage": "https://github.com/moxie-leean/wp-endpoints-post/",
-            "time": "2016-03-22 23:49:25"
+            "time": "2016-04-24 03:37:17"
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "2.5.1",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "6731851d6aaf1d0d6c58feff1065227b7fda3ba8"
+                "reference": "1bcdf03b068a530ac1962ce671dead356eeba43b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/6731851d6aaf1d0d6c58feff1065227b7fda3ba8",
-                "reference": "6731851d6aaf1d0d6c58feff1065227b7fda3ba8",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/1bcdf03b068a530ac1962ce671dead356eeba43b",
+                "reference": "1bcdf03b068a530ac1962ce671dead356eeba43b",
                 "shasum": ""
             },
             "require": {
+                "ext-simplexml": "*",
                 "ext-tokenizer": "*",
                 "ext-xmlwriter": "*",
                 "php": ">=5.1.2"
@@ -124,7 +125,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2016-01-19 23:39:10"
+            "time": "2016-04-03 22:58:34"
         },
         {
             "name": "wp-coding-standards/wpcs",

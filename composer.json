@@ -1,5 +1,5 @@
 {
-  "name": "moxie-leean/wp-endpoints-author",
+  "name": "moxie-lean/wp-endpoints-author",
   "description": "wp-endpoints-author",
   "homepage": "https://github.com/moxie-leean/wp-endpoints-author",
   "type": "library",
@@ -8,6 +8,10 @@
     {
       "name": "Moxie Developers",
       "email": "developer@getmoxied.net"
+    },
+    {
+      "name": "Crisoforo Gaspar",
+      "email": "chernandez@getmoxied.net"
     }
   ],
   "require": {
@@ -15,13 +19,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Leean\\Endpoints\\": "src/"
+      "Lean\\Endpoints\\": "src/"
     }
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "2.*",
     "wp-coding-standards/wpcs": "0.9.0",
-    "moxie-leean/wp-endpoint": "0.1.0"
+    "moxie-lean/wp-endpoint": "1.0.0"
   },
   "scripts": {
     "installSniffer": [

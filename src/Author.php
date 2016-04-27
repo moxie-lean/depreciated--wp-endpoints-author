@@ -44,11 +44,10 @@ class Author extends AbstractEndpoint {
 			$user = get_user_by( 'slug', $slug );
 		}
 
-		$response = [];
 		if ( $user ) {
-			$response = $this->get_author_data( $user );
+			return $this->get_author_data( $user );
 		}
-		return $response;
+		return [];
 	}
 
 	/**

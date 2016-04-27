@@ -17,12 +17,7 @@ class Author extends AbstractEndpoint {
 	 */
 	protected $endpoint = '/author';
 
-	/**
-	 * Static method as user interface for the class that creates a new object
-	 * of this class to make sure we can access to instance properties and methods.
-	 *
-	 * @since 0.1.0
-	 */
+	const INVALID_PARAMS = 'ln_invalid_params';
 
 	/**
 	 * Callback that creates the data that send to the endpoint.
@@ -33,13 +28,26 @@ class Author extends AbstractEndpoint {
 	 * @return array The array with the data of the endpoint
 	 */
 	public function endpoint_callback( \WP_REST_Request $request ) {
-		$user_id = $request->get_param( 'id' );
-		$response = [];
-		$user = get_user_by( 'id', $user_id );
-		if ( $user ) {
-			$response = $this->get_author_data( $user );
+		$params = $request->get_params();
+
+		$id = ( false === $params['id'] ) ? false : absint( $params['id'] );
+
+		$slug = ( false === $params['slug'] ) ? false : trim( $params['slug'], '/' );
+
+		if ( false === $id && false === $slug ) {
+			return new \WP_Error( self::INVALID_PARAMS, 'The request must have either an id or a slug', [ 'status' => 400 ] );
 		}
-		return $response;
+
+		if ( false !== $id ) {
+			$user = get_user_by( 'id', $id );
+		} else {
+			$user = get_user_by( 'slug', $slug );
+		}
+
+		if ( $user ) {
+			return $this->get_author_data( $user );
+		}
+		return [];
 	}
 
 	/**
@@ -55,6 +63,7 @@ class Author extends AbstractEndpoint {
 		$response = [
 			'id' => $data->ID,
 			'email' => $data->user_email,
+			'slug' => $data->user_nicename,
 			'name' => $data->first_name,
 			'last_name' => $data->last_name,
 			'description' => $data->description,
@@ -71,9 +80,15 @@ class Author extends AbstractEndpoint {
 	public function endpoint_args() {
 		return [
 			'id' => [
-				'required' => true,
-				'sanitize_callback' => function ( $author_id, $request, $key ) {
-					return absint( $author_id );
+				'default' => false,
+				'validate_callback' => function ( $id ) {
+					return false === $id || intval( $id ) > 0;
+				},
+			],
+			'slug' => [
+				'default' => false,
+				'sanitize_callback' => function ( $slug, $request, $key ) {
+					return false === $slug ? $slug : sanitize_title( $slug );
 				},
 			],
 		];
